@@ -1,1 +1,52 @@
-<h1>login</h1>
+<html>
+    
+
+<head>
+        
+    {% load static %}
+
+    <link href="{% static 'registro/css/style.css' %}" rel="stylesheet">
+        
+
+</head>
+
+<body>
+
+
+<div class="container">
+    <form method="POST" action="">
+        {% csrf_token %}
+      <div class="row">
+        <h4>Login</h4>
+        <div class="input-group input-group-icon">
+            <a> Username </a>
+            {{form.username}}
+          <div class="input-icon"><i class="fa fa-user"></i></div>
+        </div>
+        
+        <div class="input-group input-group-icon">
+            <a> Password </a>
+            {{form.password1}}
+          <div class="input-icon"><i class="fa fa-key"></i></div>
+        </div>
+        
+      </div>
+      
+    </form>
+  </div>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/8.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/8.7.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+
+
+</body>
+  
+</html>
