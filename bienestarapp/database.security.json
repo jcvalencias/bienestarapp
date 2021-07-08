@@ -1,0 +1,11 @@
+{
+    "rules": {
+      "parent_node": {
+        "child_node": {
+          ".read": true,
+          ".write": true,
+          ".validate": true
+        }
+      }
+    }
+  }
