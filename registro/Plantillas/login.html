@@ -20,20 +20,30 @@
         <h4>Login</h4>
         <div class="input-group input-group-icon">
             <a> Username </a>
-            {{form.username}}
+            <input type="text" name="username" class="form-control">
           <div class="input-icon"><i class="fa fa-user"></i></div>
         </div>
         
         <div class="input-group input-group-icon">
             <a> Password </a>
-            {{form.password1}}
+            <input type="password" name="password" class="form-control" >
           <div class="input-icon"><i class="fa fa-key"></i></div>
         </div>
         
       </div>
-      
+      <input id="submit-button" type="submit" name="Create User" value="Submit">
+      {{form.errors}}
     </form>
   </div>
+
+  {% for message in messages %}
+
+  <p>
+    {{message}}
+  </p>
+
+
+  {% endfor %}
 
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
