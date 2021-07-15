@@ -1,23 +1,34 @@
 <html>
-    
+
 
 <head>
-        
+
     {% load static %}
 
     <link href="{% static 'registro/css/style.css' %}" rel="stylesheet">
-        
+
+    <title>
+        Home
+    </title>
 
 </head>
 
 <body>
 
-<span>Hello, {{request.user}}</span>
-<span><a href="{% url 'logout' %}">Logout</a></span>
 
+    <ul class="Menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">contactos</a></li>
+        <li>
+            <c>Hello, {{request.user}}</c>
+        </li>
+        <li><b href="{% url 'logout' %}">Logout</b></li>
+    </ul>
 
 
 </body>
-  
-</html>
 
+</html>
